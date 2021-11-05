@@ -1,0 +1,39 @@
+ejercicios 1
+
+
+CREATE TABLE CURSO (codigo integer PRIMARY KEY, nombre varchar NOT NULL, descripcion varchar, turno varchar)
+
+ALTER TABLE MATERIA ADD column cupo INTEGER;
+
+insert into CURSO(codigo, nombre, descripcion,turno,cupo) 
+VALUES  (101, 'Algoritmos’,’Algoritmos y Estructuras de Datos','Mañana',35);
+
+INSERT into CURSO VALUES  (102, 'Matemática Discreta','','Tarde',30);
+
+insert into curso values(1, null,'prueba','tarde',30)
+insert into curso values(101, 'a','prueba','tarde',30)
+update curso set cupo = 25
+DELETE FROM CURSO WHERE nombre = "Algoritmos"
+
+
+ejercicios 3
+
+SELECT nombre,apellido,fecha_nacimiento FROM PROFESOR
+order BY fecha_nacimiento asc
+
+SELECT nombre,salario FROM PROFESOR
+WHERE salario >= 65000;
+
+SELECT fecha_nacimiento,nombre FROM PROFESOR
+WHERE fecha_nacimiento BETWEEN 1980 AND 1989;
+
+
+SELECT * from profesor limit 5;
+
+SELECT * from profesor
+where apellido like 'p%'
+
+
+SELECT * FROM PROFESOR
+WHERE fecha_nacimiento BETWEEN 1980 AND 1989
+and salario> 80000
