@@ -24,6 +24,7 @@ order BY fecha_nacimiento asc
 SELECT nombre,salario FROM PROFESOR
 WHERE salario >= 65000;
 
+
 SELECT fecha_nacimiento,nombre FROM PROFESOR
 WHERE fecha_nacimiento BETWEEN 1980 AND 1989;
 
