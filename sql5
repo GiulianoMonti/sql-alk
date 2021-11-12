@@ -1,0 +1,18 @@
+tema 4
+
+
+a)
+select * from profesor p
+inner join curso c
+on p.id=c.PROFESOR_id
+where turno =“noche”
+group by p.id 
+having count(*)>1
+
+
+b)
+SELECT * FROM estudiante e 
+WHERE e.legajo 
+NOT IN( SELECT i.estudiante_legajo
+ FROM inscripcion i 
+WHERE i.curso_codigo = 105 )
