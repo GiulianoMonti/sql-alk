@@ -1,0 +1,19 @@
+a)
+select estudiante.legajo, count(*) as "cant cursos"
+from estudiante 
+inner join inscripcion i ON
+estudiante.legajo = i.ESTUDIANTE_legajo
+GROUP by estudiante.legajo;
+
+b)
+select estudiante.legajo, count(*) as "cant cursos"
+from estudiante 
+inner join inscripcion i ON
+estudiante.legajo = i.ESTUDIANTE_legajo
+GROUP by estudiante.legajo having count(*) > 1;
+
+c)
+select * 
+from estudiante e 
+where e.legajo not In 
+(select i.estudiante_legajo from inscripcion i);
